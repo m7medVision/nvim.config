@@ -1,8 +1,8 @@
 return {
 	"nvim-neo-tree/neo-tree.nvim",
-	keys = { -- only load the plugin on these keymaps
+	keys = { -- only load the plugin on these keymaps_help
 		{ "<C-n>", "<CMD>Neotree toggle <CR>" },
-		{ "<leader>nb", "<CMD>Neotree buffers reveal float<CR>" },
+		{ "<leader>nb", "<CMD>Neotree reveal float<CR>" },
 	},
 	branch = "v3.x",
 	dependencies = {

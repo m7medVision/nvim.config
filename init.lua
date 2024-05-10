@@ -24,9 +24,19 @@ spec "user.project"
 spec "user.indentline"
 spec "user.vimtmux"
 spec "user.conform"
+spec "user.vimvisualmulti"
 spec "user.extras.copilot"
 spec "user.extras.dressing"
 spec "user.extras.neotree"
 spec "user.extras.oil"
 spec "user.extras.todo"
+
 require "user.lazy"
+vim.api.nvim_create_autocmd("TextYankPost", {
+  desc = "Highlight when yanking (copying) text",
+  group = vim.api.nvim_create_augroup("kickstart-highlight-yank", { clear = true }),
+  callback = function()
+    vim.highlight.on_yank()
+  end,
+})
+

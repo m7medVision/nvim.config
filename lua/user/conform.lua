@@ -8,6 +8,9 @@ return {
         python = { "black" },
         -- Use a sub-list to run only the first available formatter
         javascript = { { "prettierd", "prettier" } },
+        typescript = { { "prettierd", "prettier" } },
+        typescriptreact = { { "prettierd", "prettier" } },
+        markdown = { "prettier" },
       },
     }
     vim.keymap.set("n", "<leader>f", "<cmd>lua require('conform').format()<cr>")
