@@ -1,10 +1,10 @@
 return {
   {
-    "EdenEast/nightfox.nvim",
+    "Shatur/neovim-ayu",
     lazy = false,
     priority = 1000,
     config = function()
-      vim.cmd("colorscheme nightfox")
+      vim.cmd("colorscheme ayu-mirage")
     end,
   },
 }
