@@ -52,4 +52,3 @@ vim.cmd [[set iskeyword+=-]]
 vim.g.netrw_banner = 0
 vim.g.netrw_mouse = 2
 vim.opt.termbidi = true
-vim.opt.arabic = true
