@@ -31,4 +31,3 @@ spec "user.extras.neotree"
 spec "user.extras.oil"
 spec "user.extras.todo"
 require "user.lazy"
-
