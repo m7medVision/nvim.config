@@ -47,6 +47,8 @@ vim.api.nvim_set_keymap('t', '<C-;>', '<C-\\><C-n>', opts)
 keymap("n", "<leader>q", ":q<CR>", opts)
 vim.api.nvim_set_keymap('n', '<C-s>', ':update<CR>', { noremap = true, silent = true })
 keymap("n", "<leader>WQ", ":wq<CR>", opts)
+keymap("n", "<leader>gg", "<cmd>Neogit<CR>", opts)
+vim.keymap.set("n", "_", "<CMD>Oil<CR>", { desc = "Open parent directory" })
 
 -- Ignore highlight search
 keymap("n", "<leader>\\", ":nohlsearch<CR>", opts)
