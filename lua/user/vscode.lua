@@ -38,7 +38,7 @@ if vim.g.vscode then
   vim.keymap.set('n', '<leader>sf', function() vscode.action("workbench.action.quickOpen") end, { desc = "[S]earch [F]iles" })
   vim.keymap.set("n", "K", function() vscode.action("editor.action.marker.prev") end, { desc = "Hover Documentation" })
   vim.keymap.set('n', '<leader><leader>', function() vscode.action("workbench.action.quickOpenLeastRecentlyUsedEditor") end, { desc = "[S]earch [B]uffers" })
-
+  vim.keymap.set("n", "<leader>`", function () vscode.action("workbench.view.explorer") end, { desc = "Explorer" })
   vim.keymap.set("n", "<leader>rn", function() vscode.action("editor.action.rename") end, { desc = "Rename" })
 
   ------------

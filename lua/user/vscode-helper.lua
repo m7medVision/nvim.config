@@ -8,7 +8,6 @@ local enabled = {
   "nvim-treesitter",
   "nvim-treesitter-textobjects",
   "highlight-undo.nvim",
-  "nvim-multi-cursor",
   "vscode-multi-cursor.nvim",
 }
 
@@ -25,13 +24,6 @@ return {
     opts = {
       highlight = { enable = false },
       indent = { enable = false },
-    },
-  },
-  {
-    "mrbeardad/nvim-multi-cursor",
-    keys = {
-      { "<C-N>", false },
-      { "<C-S-N>", false },
     },
   },
 }
