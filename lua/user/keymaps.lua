@@ -50,5 +50,10 @@ keymap("n", "<leader>WQ", ":wq<CR>", opts)
 keymap("n", "<leader>gg", "<cmd>Neogit<CR>", opts)
 vim.keymap.set("n", "_", "<CMD>Oil<CR>", { desc = "Open parent directory" })
 
+-- diagnostics
+keymap("n", "]d", vim.diagnostic.get_next, opts)
+keymap("n", "[d", vim.diagnostic.get_prev, opts)
+
+
 -- Ignore highlight search
 keymap("n", "<leader>\\", ":nohlsearch<CR>", opts)

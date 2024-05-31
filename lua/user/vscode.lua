@@ -34,13 +34,18 @@ if vim.g.vscode then
   vim.keymap.set("n", '<leader>gi', function() vscode.action("editor.action.goToImplementation") end, { desc = '[G]oto [I]mplementation' })
   vim.keymap.set("n", '<leader>go', function() vscode.action("editor.action.goToTypeDefinition") end, { desc = 'Type Definition' })
   vim.keymap.set("n", '<leader>gr', function() vscode.action("editor.action.goToReferences") end, { desc = '[G]oto [R]eferences' })
-  vim.keymap.set('n', '<leader>we', function() vscode.action("workbench.action.toggleSidebarVisibility") end, { desc = "Window/Explorer toggle" })
   vim.keymap.set('n', '<leader>sf', function() vscode.action("workbench.action.quickOpen") end, { desc = "[S]earch [F]iles" })
   vim.keymap.set("n", "K", function() vscode.action("editor.action.marker.prev") end, { desc = "Hover Documentation" })
   vim.keymap.set('n', '<leader><leader>', function() vscode.action("workbench.action.quickOpenLeastRecentlyUsedEditor") end, { desc = "[S]earch [B]uffers" })
   vim.keymap.set("n", "<leader>`", function () vscode.action("workbench.view.explorer") end, { desc = "Explorer" })
   vim.keymap.set("n", "<leader>rn", function() vscode.action("editor.action.rename") end, { desc = "Rename" })
-
+  vim.keymap.set('n', '<leader>we', function() vscode.action("workbench.action.toggleSidebarVisibility") end, { desc = "Window/Explorer toggle" })
+  vim.keymap.set("n", "]d", function () vscode.action("editor.action.marker.next") end, { desc = "Next Diagnostic" })
+  vim.keymap.set("n", "[d", function () vscode.action("editor.action.marker.prev") end, { desc = "Prev Diagnostic" })
+  -- Copilot mappings
+  vim.keymap.set("i", "<M-w>", function() vscode.action("editor.action.inlineSuggest.acceptNextWord") end, { desc = "Accept Next Word" })
+  vim.keymap.set("i", "<M-BS>", function() vscode.action("editor.action.inlineSuggest.hide") end, { desc = "Hide Suggestions" })
+  vim.keymap.set("i", "<M-a>", function() vscode.action("editor.action.inlineSuggest.trigger") end, { desc = "Trigger Suggestions" })
   ------------
   -- Format --
   ------------
