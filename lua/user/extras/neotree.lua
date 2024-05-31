@@ -1,5 +1,8 @@
 return {
 	"nvim-neo-tree/neo-tree.nvim",
+  enabled = function()
+    return not vim.g.vscode
+  end,
 	keys = { -- only load the plugin on these keymaps_help
 		{ "<leader>`", "<CMD>Neotree toggle <CR>" },
 		{ "<leader>nb", "<CMD>Neotree reveal float<CR>" },
