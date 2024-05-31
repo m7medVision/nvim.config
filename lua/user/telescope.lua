@@ -1,5 +1,8 @@
 return {
   "nvim-telescope/telescope.nvim",
+  enabled = function()
+    return not vim.g.vscode
+  end,
   event = "VimEnter",
   branch = "0.1.x",
   dependencies = {
