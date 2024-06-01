@@ -42,10 +42,7 @@ if vim.g.vscode then
   vim.keymap.set('n', '<leader>we', function() vscode.action("workbench.action.toggleSidebarVisibility") end, { desc = "Window/Explorer toggle" })
   vim.keymap.set("n", "]d", function () vscode.action("editor.action.marker.next") end, { desc = "Next Diagnostic" })
   vim.keymap.set("n", "[d", function () vscode.action("editor.action.marker.prev") end, { desc = "Prev Diagnostic" })
-  -- Copilot mappings
-  vim.keymap.set("i", "<M-w>", function() vscode.action("editor.action.inlineSuggest.acceptNextWord") end, { desc = "Accept Next Word" })
-  vim.keymap.set("i", "<M-BS>", function() vscode.action("editor.action.inlineSuggest.hide") end, { desc = "Hide Suggestions" })
-  vim.keymap.set("i", "<M-a>", function() vscode.action("editor.action.inlineSuggest.trigger") end, { desc = "Trigger Suggestions" })
+
   ------------
   -- Format --
   ------------
@@ -56,11 +53,8 @@ if vim.g.vscode then
     return format() .. "_"
   end
 
-  k({ "n", "x" }, "gq", format)
-  k({ "n" }, "gqq", format_line)
   k({ "n", "x" }, "=", format)
   k({ "n" }, "==", format_line)
-
   -------------
   -- Comment --
   -------------
@@ -79,6 +73,4 @@ if vim.g.vscode then
 
   k({ "n", "x" }, "gc", comment)
   k({ "n" }, "gcc", comment_line)
-  k({ "x" }, "<C-/>", comment)
-  k({ "n" }, "<C-/>", comment_line)
 end
