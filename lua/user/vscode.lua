@@ -42,7 +42,6 @@ if vim.g.vscode then
   vim.keymap.set('n', '<leader>we', function() vscode.action("workbench.action.toggleSidebarVisibility") end, { desc = "Window/Explorer toggle" })
   vim.keymap.set("n", "]d", function () vscode.action("editor.action.marker.next") end, { desc = "Next Diagnostic" })
   vim.keymap.set("n", "[d", function () vscode.action("editor.action.marker.prev") end, { desc = "Prev Diagnostic" })
-
   ------------
   -- Format --
   ------------
