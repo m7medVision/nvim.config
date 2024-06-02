@@ -63,7 +63,7 @@ function M.config()
       ["<Up>"] = cmp.mapping(cmp.mapping.select_prev_item(), { "i", "c" }),
       ["<C-b>"] = cmp.mapping(cmp.mapping.scroll_docs(-1), { "i", "c" }),
       ["<C-f>"] = cmp.mapping(cmp.mapping.scroll_docs(1), { "i", "c" }),
-      ["<Tab>"] = cmp.mapping.confirm {
+      ["<C-CR>"] = cmp.mapping.confirm {
         behavior = cmp.ConfirmBehavior.Insert,
         select = true,
       },
@@ -83,6 +83,20 @@ function M.config()
           end
         end,
       },
+      ["<Tab>"] = function(fallback)
+        if luasnip.jumpable(1) then
+          luasnip.jump(1)
+        else
+          fallback()
+        end
+      end,
+      ["<S-Tab>"] = function(fallback)
+        if luasnip.jumpable(-1) then
+          luasnip.jump(-1)
+        else
+          fallback()
+        end
+      end,
     },
     formatting = {
       expandable_indicator = icons.misc.Plus,
