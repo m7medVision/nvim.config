@@ -43,7 +43,6 @@ function M.config()
   local cmp = require "cmp"
   local luasnip = require "luasnip"
   require("luasnip/loaders/from_vscode").lazy_load()
-
   vim.api.nvim_set_hl(0, "CmpItemKindCopilot", { fg = "#6CC644" })
   vim.api.nvim_set_hl(0, "CmpItemKindTabnine", { fg = "#CA42F0" })
   vim.api.nvim_set_hl(0, "CmpItemKindEmoji", { fg = "#FDE030" })
@@ -63,7 +62,8 @@ function M.config()
       ["<Up>"] = cmp.mapping(cmp.mapping.select_prev_item(), { "i", "c" }),
       ["<C-b>"] = cmp.mapping(cmp.mapping.scroll_docs(-1), { "i", "c" }),
       ["<C-f>"] = cmp.mapping(cmp.mapping.scroll_docs(1), { "i", "c" }),
-      ["<C-CR>"] = cmp.mapping.confirm {
+      ["<C-Space>"] = cmp.mapping(cmp.mapping.complete(), { "i", "c" }),
+      ["<CR>"] = cmp.mapping.confirm {
         behavior = cmp.ConfirmBehavior.Insert,
         select = true,
       },
